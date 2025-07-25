@@ -47,8 +47,9 @@ body {
 }
 
 #quote-card {
-    background: linear-gradient(135deg, var(--highlight), var(--highlight-dark));
+    background: #e4a49b; /* Dark celestial gradient */
     transition: all 0.5s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1), inset 0 0 80px rgba(228, 164, 155, 0.2);
 }
 
 .most-important-memory {
@@ -86,4 +87,12 @@ body {
 .fade-in-up {
     opacity: 0;
     animation: fadeIn-up 1s ease-out forwards;
+}
+.quote-mark {
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem; /* 128px */
+    line-height: 1;
+    color: rgba(228, 164, 155, 0.15); 
+    z-index: 0;
 }
