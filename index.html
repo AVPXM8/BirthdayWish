@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Universe For Divya ✨</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --light-cream: #FEFBF6;
+            --dark-text: #3D3C42;
+            --highlight: #ffdde1;
+            --highlight-dark: #ee9ca7;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-cream);
+            color: var(--dark-text);
+        }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-caveat { font-family: 'Caveat', cursive; }
+        
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428107/main_t3blha.jpg');
+            background-size: cover;
+            background-position: center 30%;
+        }
+
+        .section-bg { background-color: #F8F4EA; }
+
+        @keyframes fadeIn-up {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeIn-up 1s ease-out forwards;
+        }
+        
+        .gallery-item {
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        #quote-card {
+            background: linear-gradient(135deg, var(--highlight), var(--highlight-dark));
+            transition: all 0.5s ease;
+        }
+        
+        .most-important-memory {
+            border: 6px solid var(--highlight-dark);
+            transform: scale(1.05);
+            z-index: 5;
+        }
+        
+        .video-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+        }
+
+        .btn {
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <section class="hero h-screen flex flex-col items-center justify-center text-white p-4">
+        <div class="text-center">
+            <h2 class="font-caveat text-4xl md:text-6xl fade-in-up" style="animation-delay: 0.2s;">The World Celebrates You Today</h2>
+            <h1 class="font-playfair text-6xl md:text-9xl my-2 tracking-wider fade-in-up" style="animation-delay: 0.5s;">Happy Birthday, Divya!</h1>
+            <p class="text-lg md:text-2xl mt-4 fade-in-up" style="animation-delay: 0.8s;">Shining brighter than ever on July 25th ✨🎂</p>
+        </div>
+        <a href="#wish" class="absolute bottom-10 animate-bounce">
+            <i class="fa-solid fa-arrow-down text-3xl"></i>
+        </a>
+    </section>
+
+    <section id="wish" class="py-24 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-12 max-w-6xl">
+            <div class="md:w-2/3 text-center md:text-left">
+                <h2 class="font-playfair text-4xl md:text-5xl mb-4">A Heartfelt Wish For You... 💖</h2>
+                <p class="text-lg leading-relaxed">
+                    Dear Divya,
+                    <br>
+                    Happy Birthday to a friend who brings so much light and laughter into the world! Your kindness is a gift to everyone you meet💖, and your strength is an inspiration. It’s an absolute joy to walk alongside you in this journey and share in the memories we create🎉❤️.
+                    <br><br>
+                    May this new chapter be your best one yet, filled with endless love💖, success, and all the happiness you so richly deserve. Keep being your amazing self!
+                    <br>
+                    <span class="font-caveat text-4xl mt-4 inline-block">- Your friend, Vivek Pal</span>
+                </p>
+            </div>
+            <div class="md:w-1/3">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428110/with_me_3_wlo2be.jpg" alt="Divya and Vivek" class="rounded-2xl shadow-2xl gallery-item">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-bg py-24 px-6">
+        <div class="container mx-auto text-center max-w-3xl">
+            <h2 class="font-playfair text-4xl mb-8">A Little Sparkle for Your Day! ✨</h2>
+            <div id="quote-card" class="p-8 rounded-2xl shadow-xl text-white">
+                <p id="quote-text" class="text-2xl font-light italic">"May your birthday be the start of a year filled with good luck, good health, and much happiness."</p>
+            </div>
+            <button onclick="changeQuote()" class="mt-8 bg-white text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg btn">
+                <i class="fa-solid fa-wand-sparkles mr-2"></i>Get a New Wish
+            </button>
+        </div>
+    </section>
+
+    <section class="py-24 px-6">
+        <div class="container mx-auto text-center max-w-7xl">
+            <h2 class="font-playfair text-4xl md:text-5xl mb-16">Those Memories 💖  🎬</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="video-card">
+                    <h3 class="font-semibold text-xl mb-3">A Special Birthday Edit</h3>
+                    <video src="https://res.cloudinary.com/dwmj6up6j/video/upload/v1753428110/special_for_bdy_agthiq.mp4" controls muted class="w-full rounded-lg"></video>
+                </div>
+                <div class="video-card md:mt-8">
+                    <h3 class="font-semibold text-xl mb-3">Fun With Friends</h3>
+                    <video src="https://res.cloudinary.com/dwmj6up6j/video/upload/v1753428115/with_friends_zy2jeq.mp4" controls muted class="w-full rounded-lg"></video>
+                </div>
+                <div class="video-card">
+                    <h3 class="font-semibold text-xl mb-3">Golden Oldies</h3>
+                    <video src="https://res.cloudinary.com/dwmj6up6j/video/upload/v1753428107/old_video_vc13sl.mp4" controls muted class="w-full rounded-lg"></video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-bg py-24 px-6">
+        <div class="container mx-auto text-center max-w-7xl">
+            <h2 class="font-playfair text-4xl md:text-5xl mb-12">The "Moments you never forget" Gallery ❤️</h2>
+            <p class="max-w-3xl mx-auto mb-12 text-lg">A few moments too precious to forget, now in the spotlight they deserve.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428824/WhatsApp_Image_2025-07-25_at_12.56.22_eq6gfi.jpg" alt="Special Memory" class="gallery-item rounded-lg">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428822/4_hydkcm.jpg" alt="Most Important Special Memory" class="gallery-item rounded-lg most-important-memory col-span-2 row-span-2">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428824/WhatsApp_Image_2025-07-25_at_12.37.06_escqb0.jpg" alt="Special Memory" class="gallery-item rounded-lg">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428823/WhatsApp_Image_2025-07-25_at_12.56.21_hlner3.jpg" alt="Special Memory" class="gallery-item rounded-lg">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753429850/old_mranuq.jpg" alt="Special Memory" class="gallery-item rounded-lg">
+            </div>
+            <div class="mt-12">
+                <a href="https://www.instagram.com/divya_deepak_srivastava/" target="_blank" class="bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold py-3 px-8 rounded-full shadow-lg btn">
+                    See More Moments on Instagram <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 px-6">
+        <div class="container mx-auto text-center max-w-7xl">
+            <h2 class="font-playfair text-4xl md:text-5xl mb-12">A Collection of Moments 📸</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753426952/WhatsApp_Image_2025-03-30_at_18.52.20_rqsmkr.jpg" class="gallery-item rounded-lg">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753426958/WhatsApp_Image_2025-03-30_at_18.52.19_sxmft8.jpg" class="gallery-item rounded-lg col-span-1 md:col-span-2">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753426954/WhatsApp_Image_2025-03-30_at_18.52.18_qklvny.jpg" class="gallery-item rounded-lg">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428109/with_me_2_o8hkx7.jpg" class="gallery-item rounded-lg">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428107/ith_me_cjn2ne.jpg" class="gallery-item rounded-lg">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428110/withf_kz8kyw.jpg" class="gallery-item rounded-lg">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428105/alone_3_xs8zjo.jpg" class="gallery-item rounded-lg">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428108/WhatsApp_Image_2025-03-30_at_18.52.16_iges9o.jpg" class="gallery-item rounded-lg col-span-2">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428105/alone_old2_a4ncuc.jpg" class="gallery-item rounded-lg">
+                <img src="https://res.cloudinary.com/dwmj6up6j/image/upload/v1753426952/WhatsApp_Image_2025-03-30_at_18.52.19_1_rivent.jpg" class="gallery-item rounded-lg">
+            </div>
+        </div>
+    </section>
+    
+    <section id="video" class="py-24 px-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="font-playfair text-4xl md:text-5xl mb-12">Your Birthday Soundtrack 🎶</h2>
+            <div class="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-2xl">
+                <iframe src="https://www.youtube.com/embed/i4uCLfZVDs4?list=PLPjoSCg1tarU8tp-kURB3M-wSgHkdW6xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="mt-8">
+                <a href="https://youtube.com/playlist?list=PLPjoSCg1tarU8tp-kURB3M-wSgHkdW6xo&si=bwXe8iTm_vIA8LBm0" target="_blank" class="bg-red-600 text-white font-bold py-3 px-8 rounded-full shadow-lg btn">
+                    <i class="fab fa-youtube mr-2"></i>Open more memories on YouTube 😍
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12 px-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <p class="font-caveat text-4xl mb-4">Crafted with love ❤️ by Vivek Pal</p>
+            <p class="mb-6">Want a special website like this? Let's create something beautiful!</p>
+            <div class="flex justify-center items-center gap-4 mb-8">
+                <a href="https://wa.me/919354368207" target="_blank" class="bg-green-500 text-white font-bold py-2 px-6 rounded-full btn">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp Me
+                </a>
+                <a href="https://www.instagram.com/ashish._.pal3" target="_blank" class="bg-pink-500 text-white font-bold py-2 px-6 rounded-full btn">
+                    <i class="fab fa-instagram mr-2"></i>Instagram
+                </a>
+                <a href="https://www.instagram.com/divya_deepak_srivastava/" target="_blank" class="bg-purple-500 text-white font-bold py-2 px-6 rounded-full hover:bg-purple-600 transition-colors">
+                    <i class="fa-solid fa-cake-candles mr-2"></i>Wish Divya on Insta!
+                </a>
+            </div>
+            <div class="border-t border-gray-700 pt-6 mt-6">
+                <p class="text-lg">If this website made you smile, feel free to buy me a pizza! 🍕</p>
+                <p class="mt-2 bg-gray-700 inline-block px-4 py-1 rounded-lg text-lg">UPI ID: <span class="font-mono font-bold">paytovivek@ikwik</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const quotes = [
+    "🌞 Wishing you a day as sunny as your smile, as warm as your heart, and as wonderful as you are. Happy Birthday! 🎂✨",
+    
+    "🎉 Cheers to you for another trip around the sun! May your day be filled with cake 🍰, laughter 😂, and people who adore you 💕.",
+    
+    "💎 Happy Birthday! You're not getting older, you're just increasing in value. Here's to a priceless year ahead! 💖🎈",
+    
+    "☀️ May your life always be filled with sunshine, happiness, and the warmth of love. Have a magical birthday, Divya! 🧁🌷",
+    
+    "🌍 The world is a better place because you're in it. Thank you for being you. Keep shining bright this year and forever ✨❤️.",
+    
+    "💌 Sending you a birthday wish wrapped in love, tied with joy, and sealed with a smile 😊. Happy Birthday, my amazing friend! 💞",
+    
+    "🌟 Dream big and chase your passions. May this year bring you closer to everything your heart desires. You deserve the best! 🎯🎁",
+    
+    "🎀 I hope your birthday is full of your favorite songs, places, people, and smiles. You're the heart of so many beautiful memories 💫",
+    
+    "💕 Divya, you’re not just a friend—you’re a blessing. I feel lucky every day to know you. Happy Birthday from the bottom of my heart! 💖 – Vivek",
+
+    "🌈 On this special day, I just want to say… you make the world a brighter place with your laugh, your strength, and your sparkle 💎💗 – With love, Vivek",
+
+    "🥰 You’ve touched so many hearts—including mine. Here's to another year of inspiring smiles and unforgettable moments 💞🎊",
+
+    "🎂 I hope this year unfolds like a dream for you, Divya. You're truly one in a million. Happiest of birthdays to you! 💐 – Vivek Pal",
+
+    "💫 Divya, you light up every room you enter. I hope your birthday reflects the incredible light you bring into the world. 🌟🎉",
+
+    "🕊️ Life is beautiful, and so are you. Keep living with that same grace, confidence, and love. Happy Birthday, my dearest friend! ❤️ – Vivek",
+
+    "🌸 To the queen of kindness, laughter, and elegance—Happy Birthday, Divya! May all your dreams come true today and always. 💝"
+];
+
+
+        const quoteText = document.getElementById('quote-text');
+        const quoteCard = document.getElementById('quote-card');
+        let currentQuoteIndex = 0;
+
+        function changeQuote() {
+            currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+            quoteCard.style.transform = 'scale(0.95)';
+            quoteCard.style.opacity = '0.5';
+            setTimeout(() => {
+                quoteText.textContent = `"${quotes[currentQuoteIndex]}"`;
+                quoteCard.style.transform = 'scale(1)';
+                quoteCard.style.opacity = '1';
+            }, 300);
+        }
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('h1, h2, h3, p, div.grid > div, .gallery-item').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
