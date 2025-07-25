@@ -1,0 +1,89 @@
+/* --- Custom Properties --- */
+:root {
+    --light-cream: #FEFBF6;
+    --dark-text: #3D3C42;
+    --highlight: #ffdde1;
+    --highlight-dark: #ee9ca7;
+}
+
+/* --- Base Styles --- */
+html { 
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-cream);
+    color: var(--dark-text);
+}
+
+/* --- Font Styles --- */
+.font-playfair { 
+    font-family: 'Playfair Display', serif; 
+}
+.font-caveat { 
+    font-family: 'Caveat', cursive; 
+}
+
+/* --- Section & Element Styles --- */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://res.cloudinary.com/dwmj6up6j/image/upload/v1753428107/main_t3blha.jpg');
+    background-size: cover;
+    background-position: center 30%;
+}
+
+.section-bg { 
+    background-color: #F8F4EA; 
+}
+
+.gallery-item {
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+}
+.gallery-item:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+#quote-card {
+    background: linear-gradient(135deg, var(--highlight), var(--highlight-dark));
+    transition: all 0.5s ease;
+}
+
+.most-important-memory {
+    border: 6px solid var(--highlight-dark);
+    transform: scale(1.05);
+    z-index: 5;
+}
+
+.video-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* --- Animation Styles --- */
+@keyframes fadeIn-up {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeIn-up 1s ease-out forwards;
+}
